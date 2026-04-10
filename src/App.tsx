@@ -156,6 +156,58 @@ export default function App() {
         </div>
       </section>
 
+      {/* About Us */}
+      <section id="about" className="py-24 sm:py-32">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-base font-semibold uppercase tracking-wider text-emerald-600">About Us</h2>
+              <h3 className="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Bridging Indonesian Excellence to the Global Green Energy Market</h3>
+              <p className="mt-4 text-lg text-slate-600 leading-relaxed">
+                Agro Sinar Jaya is a forward-thinking biomass supply company based in the heart of Indonesia's palm oil industry. We specialize in the sourcing, processing, and exportation of high-quality Palm Kernel Shells (PKS) to power the global transition toward renewable energy.
+              </p>
+              <p className="mt-4 text-lg text-slate-600 leading-relaxed">
+                Founded on the principles of Traceability, Reliability, and Technology, we leverage advanced supply chain monitoring to ensure that every ton of biomass we deliver meets the rigorous sustainability standards of our international partners, particularly in Japan and East Asia.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="space-y-8 rounded-2xl bg-emerald-50 p-8 shadow-sm border border-emerald-100"
+            >
+              <div>
+                <h4 className="text-xl font-bold text-emerald-950 flex items-center gap-2">
+                  <div className="w-8 h-8 rounded-full bg-emerald-200 flex items-center justify-center text-emerald-800"><ShieldCheck className="w-5 h-5"/></div>
+                  Our Vision
+                </h4>
+                <p className="mt-3 text-emerald-900/80">To become the most trusted and tech-driven partner in the Southeast Asian biomass industry, recognized for our commitment to sustainable energy and transparent supply chain practices.</p>
+              </div>
+              <Separator className="bg-emerald-200/50" />
+              <div>
+                <h4 className="text-xl font-bold text-emerald-950 flex items-center gap-2">
+                  <div className="w-8 h-8 rounded-full bg-emerald-200 flex items-center justify-center text-emerald-800"><Leaf className="w-5 h-5"/></div>
+                  Our Mission
+                </h4>
+                <ul className="mt-3 space-y-3 text-sm text-emerald-900/80">
+                  <li><strong>Sustainability First:</strong> To provide premium biomass products sourced from RSPO/ISCC-certified mills, ensuring zero-deforestation.</li>
+                  <li><strong>Operational Excellence:</strong> To utilize data-driven logistics and quality control systems to guarantee consistency and on-time delivery.</li>
+                  <li><strong>Economic Impact:</strong> To empower local industries in Sumatra and Kalimantan by connecting high-value palm by-products with global markets.</li>
+                  <li><strong>International Standards:</strong> To maintain the highest compliance with certifications such as Green Gold Label (GGL) to meet the requirements of the Japanese FIT scheme.</li>
+                </ul>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Core Values */}
       <section id="values" className="bg-slate-50 py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -181,7 +233,7 @@ export default function App() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-slate-600 leading-relaxed">
-                    Our commitment to the environment is at our core. We source exclusively from RSPO-certified mills, ensuring zero deforestation and responsible land management.
+                    Our commitment to the environment is at our core. We aim for rigorous sourcing standards, supporting zero deforestation policies and promoting responsible land management across our network.
                   </p>
                 </CardContent>
               </Card>
@@ -193,11 +245,11 @@ export default function App() {
                   <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-emerald-100 text-emerald-700">
                     <ShieldCheck className="h-6 w-6" />
                   </div>
-                  <CardTitle className="text-xl">Traceability (GGL)</CardTitle>
+                  <CardTitle className="text-xl">Traceability & Transparency</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-slate-600 leading-relaxed">
-                    We adhere to Green Gold Label (GGL) standards, providing full transparency from the plantation to the final delivery port. Every shipment is documented and verified.
+                    We build our supply chain with full traceability in mind, providing transparency from plantation to port, aligning with international compliance goals.
                   </p>
                 </CardContent>
               </Card>
@@ -222,82 +274,78 @@ export default function App() {
         </div>
       </section>
 
-      {/* Product Specs */}
+      {/* Our Products */}
       <section id="specs" className="py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-base font-semibold uppercase tracking-wider text-emerald-600">Premium Quality</h2>
-              <h3 className="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Technical Specifications</h3>
-              <p className="mt-4 text-lg text-slate-600">
-                Our Palm Kernel Shells are processed and screened to meet the highest international standards for industrial biomass fuel.
-              </p>
-
-              <div className="mt-8 space-y-4">
-                {[
-                  "High Calorific Value for efficient combustion",
-                  "Low moisture content for better storage and handling",
-                  "Minimal impurities and ash content",
-                  "Uniform size distribution for automated feeding systems"
-                ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-emerald-600" />
-                    <span className="text-slate-700">{item}</span>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="rounded-2xl border border-emerald-100 bg-white p-2 shadow-xl"
-            >
-              <div className="overflow-hidden rounded-xl border border-slate-100">
-                <Table>
-                  <TableHeader className="bg-emerald-900">
-                    <TableRow className="hover:bg-emerald-900">
-                      <TableHead className="text-white">Parameter</TableHead>
-                      <TableHead className="text-white">Typical Value</TableHead>
-                    </TableRow>
-                  </TableHeader>
-                  <TableBody>
-                    <TableRow>
-                      <TableCell className="font-medium">Net Calorific Value (NCV)</TableCell>
-                      <TableCell>3,800 - 4,200 kcal/kg</TableCell>
-                    </TableRow>
-                    <TableRow className="bg-emerald-50/30">
-                      <TableCell className="font-medium">Total Moisture (As Received)</TableCell>
-                      <TableCell>12% - 18%</TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell className="font-medium">Ash Content (Dry Basis)</TableCell>
-                      <TableCell>Max 3%</TableCell>
-                    </TableRow>
-                    <TableRow className="bg-emerald-50/30">
-                      <TableCell className="font-medium">Impurities</TableCell>
-                      <TableCell>Max 2%</TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell className="font-medium">Sulfur Content</TableCell>
-                      <TableCell>Max 0.05%</TableCell>
-                    </TableRow>
-                    <TableRow className="bg-emerald-50/30">
-                      <TableCell className="font-medium">Chlorine Content</TableCell>
-                      <TableCell>Max 0.03%</TableCell>
-                    </TableRow>
-                  </TableBody>
-                </Table>
-              </div>
-            </motion.div>
+          <div className="mb-16 text-center">
+             <h2 className="text-base font-semibold uppercase tracking-wider text-emerald-600">Premium Quality</h2>
+             <h3 className="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Our Biomass Products</h3>
+             <p className="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
+                We supply high-efficiency, sustainable biomass fuels processed to meet the rigorous demands of international power plants.
+             </p>
           </div>
+          
+          <motion.div 
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            className="grid gap-8 lg:grid-cols-3"
+          >
+             <motion.div variants={fadeIn}>
+               <Card className="h-full overflow-hidden border border-slate-100 shadow-md">
+                  <img src="https://images.unsplash.com/photo-1611273426858-450d8ce69b0b?q=80&w=800&auto=format&fit=crop" alt="Palm Kernel Shells" className="h-48 w-full object-cover"/>
+                  <CardHeader>
+                     <CardTitle>Palm Kernel Shells (PKS)</CardTitle>
+                     <CardDescription>High-calorific value, low-ash biomass fuel</CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                     <p className="text-sm text-slate-600">Processed and screened to meet international standards for industrial biomass fuel.</p>
+                     <div className="text-sm space-y-2 border-t pt-4">
+                        <div className="flex justify-between"><span className="text-slate-500">NCV</span> <span className="font-medium text-slate-900">3,800 - 4,200 kcal/kg</span></div>
+                        <div className="flex justify-between"><span className="text-slate-500">Moisture</span> <span className="font-medium text-slate-900">12% - 18%</span></div>
+                        <div className="flex justify-between"><span className="text-slate-500">Ash</span> <span className="font-medium text-slate-900">Max 3%</span></div>
+                     </div>
+                  </CardContent>
+               </Card>
+             </motion.div>
+
+             <motion.div variants={fadeIn}>
+               <Card className="h-full overflow-hidden border border-slate-100 shadow-md">
+                  <img src="https://images.unsplash.com/photo-1518536644670-362241cf43aa?q=80&w=800&auto=format&fit=crop" alt="Wood Pellets" className="h-48 w-full object-cover"/>
+                  <CardHeader>
+                     <CardTitle>Wood Pellets</CardTitle>
+                     <CardDescription>Dense, uniform, and clean-burning</CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                     <p className="text-sm text-slate-600">Premium wood pellets manufactured from sustainably managed forestry by-products.</p>
+                     <div className="text-sm space-y-2 border-t pt-4">
+                        <div className="flex justify-between"><span className="text-slate-500">NCV</span> <span className="font-medium text-slate-900">4,000 - 4,600 kcal/kg</span></div>
+                        <div className="flex justify-between"><span className="text-slate-500">Moisture</span> <span className="font-medium text-slate-900">Max 10%</span></div>
+                        <div className="flex justify-between"><span className="text-slate-500">Ash</span> <span className="font-medium text-slate-900">Max 1.5%</span></div>
+                     </div>
+                  </CardContent>
+               </Card>
+             </motion.div>
+
+             <motion.div variants={fadeIn}>
+               <Card className="h-full overflow-hidden border border-slate-100 shadow-md">
+                  <img src="https://images.unsplash.com/photo-1587570494488-812e9b897f26?q=80&w=800&auto=format&fit=crop" alt="Palm Kernel Expeller" className="h-48 w-full object-cover"/>
+                  <CardHeader>
+                     <CardTitle>Palm Kernel Expeller</CardTitle>
+                     <CardDescription>High-protein by-product</CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                     <p className="text-sm text-slate-600">A nutritious by-product of palm kernel oil extraction, ideal for animal feed formulations.</p>
+                     <div className="text-sm space-y-2 border-t pt-4">
+                        <div className="flex justify-between"><span className="text-slate-500">Profat (Protein+Fat)</span> <span className="font-medium text-slate-900">Min 21%</span></div>
+                        <div className="flex justify-between"><span className="text-slate-500">Moisture</span> <span className="font-medium text-slate-900">Max 10%</span></div>
+                        <div className="flex justify-between"><span className="text-slate-500">Shell Content</span> <span className="font-medium text-slate-900">Max 5%</span></div>
+                     </div>
+                  </CardContent>
+               </Card>
+             </motion.div>
+          </motion.div>
         </div>
       </section>
 
@@ -358,7 +406,7 @@ export default function App() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-slate-900">Email Us</h4>
-                  <p className="text-slate-600">sales@agrosinarjaya.com</p>
+                  <p className="text-slate-600">kenny.chen25@gmail.com</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
