@@ -148,7 +148,7 @@ export default function App() {
               <Button size="lg" className="h-14 px-8 text-lg bg-emerald-600 hover:bg-emerald-500">
                 Explore Our Products <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button size="lg" variant="outline" className="h-14 px-8 text-lg border-white text-white hover:bg-white hover:text-emerald-900">
+              <Button size="lg" variant="outline" className="h-14 px-8 text-lg bg-transparent border-white text-white hover:bg-white hover:text-emerald-900">
                 Download Brochure
               </Button>
             </div>
