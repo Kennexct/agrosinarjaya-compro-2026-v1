@@ -294,7 +294,7 @@ export default function App() {
           >
              <motion.div variants={fadeIn}>
                <Card className="h-full overflow-hidden border border-slate-100 shadow-md">
-                  <img src="https://images.unsplash.com/photo-1611273426858-450d8ce69b0b?q=80&w=800&auto=format&fit=crop" alt="Palm Kernel Shells" className="h-48 w-full object-cover"/>
+                  <img src="https://images.unsplash.com/photo-1611273426858-450d8ce69b0b?q=80&w=800&auto=format&fit=crop" alt="Palm Kernel Shells" className="h-48 w-full object-cover" referrerPolicy="no-referrer" />
                   <CardHeader>
                      <CardTitle>Palm Kernel Shells (PKS)</CardTitle>
                      <CardDescription>High-calorific value, low-ash biomass fuel</CardDescription>
@@ -312,7 +312,7 @@ export default function App() {
 
              <motion.div variants={fadeIn}>
                <Card className="h-full overflow-hidden border border-slate-100 shadow-md">
-                  <img src="https://images.unsplash.com/photo-1518536644670-362241cf43aa?q=80&w=800&auto=format&fit=crop" alt="Wood Pellets" className="h-48 w-full object-cover"/>
+                  <img src="https://images.unsplash.com/photo-1518536644670-362241cf43aa?q=80&w=800&auto=format&fit=crop" alt="Wood Pellets" className="h-48 w-full object-cover" referrerPolicy="no-referrer" />
                   <CardHeader>
                      <CardTitle>Wood Pellets</CardTitle>
                      <CardDescription>Dense, uniform, and clean-burning</CardDescription>
@@ -330,7 +330,7 @@ export default function App() {
 
              <motion.div variants={fadeIn}>
                <Card className="h-full overflow-hidden border border-slate-100 shadow-md">
-                  <img src="https://images.unsplash.com/photo-1587570494488-812e9b897f26?q=80&w=800&auto=format&fit=crop" alt="Palm Kernel Expeller" className="h-48 w-full object-cover"/>
+                  <img src="https://images.unsplash.com/photo-1587570494488-812e9b897f26?q=80&w=800&auto=format&fit=crop" alt="Palm Kernel Expeller" className="h-48 w-full object-cover" referrerPolicy="no-referrer" />
                   <CardHeader>
                      <CardTitle>Palm Kernel Expeller</CardTitle>
                      <CardDescription>High-protein by-product</CardDescription>
