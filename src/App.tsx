@@ -23,6 +23,9 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
 
+import pksImg from "./assets/pks.jpg";
+import pkeImg from "./assets/pke.jpg";
+
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
@@ -290,11 +293,11 @@ export default function App() {
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            className="grid gap-8 lg:grid-cols-3"
+            className="grid gap-8 lg:grid-cols-2 max-w-5xl mx-auto"
           >
              <motion.div variants={fadeIn}>
                <Card className="h-full overflow-hidden border border-slate-100 shadow-md">
-                  <img src="https://images.unsplash.com/photo-1611273426858-450d8ce69b0b?q=80&w=800&auto=format&fit=crop" alt="Palm Kernel Shells" className="h-48 w-full object-cover" referrerPolicy="no-referrer" />
+                  <img src={pksImg} alt="Palm Kernel Shells" className="h-48 w-full object-cover" />
                   <CardHeader>
                      <CardTitle>Palm Kernel Shells (PKS)</CardTitle>
                      <CardDescription>High-calorific value, low-ash biomass fuel</CardDescription>
@@ -312,25 +315,7 @@ export default function App() {
 
              <motion.div variants={fadeIn}>
                <Card className="h-full overflow-hidden border border-slate-100 shadow-md">
-                  <img src="https://images.unsplash.com/photo-1518536644670-362241cf43aa?q=80&w=800&auto=format&fit=crop" alt="Wood Pellets" className="h-48 w-full object-cover" referrerPolicy="no-referrer" />
-                  <CardHeader>
-                     <CardTitle>Wood Pellets</CardTitle>
-                     <CardDescription>Dense, uniform, and clean-burning</CardDescription>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                     <p className="text-sm text-slate-600">Premium wood pellets manufactured from sustainably managed forestry by-products.</p>
-                     <div className="text-sm space-y-2 border-t pt-4">
-                        <div className="flex justify-between"><span className="text-slate-500">NCV</span> <span className="font-medium text-slate-900">4,000 - 4,600 kcal/kg</span></div>
-                        <div className="flex justify-between"><span className="text-slate-500">Moisture</span> <span className="font-medium text-slate-900">Max 10%</span></div>
-                        <div className="flex justify-between"><span className="text-slate-500">Ash</span> <span className="font-medium text-slate-900">Max 1.5%</span></div>
-                     </div>
-                  </CardContent>
-               </Card>
-             </motion.div>
-
-             <motion.div variants={fadeIn}>
-               <Card className="h-full overflow-hidden border border-slate-100 shadow-md">
-                  <img src="https://images.unsplash.com/photo-1587570494488-812e9b897f26?q=80&w=800&auto=format&fit=crop" alt="Palm Kernel Expeller" className="h-48 w-full object-cover" referrerPolicy="no-referrer" />
+                  <img src={pkeImg} alt="Palm Kernel Expeller" className="h-48 w-full object-cover" />
                   <CardHeader>
                      <CardTitle>Palm Kernel Expeller</CardTitle>
                      <CardDescription>High-protein by-product</CardDescription>
